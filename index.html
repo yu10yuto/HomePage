@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="icon" href="./アイコン.png">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body{
+            font-family: "M PLUS Rounded 1c";
+            background-image: url(青いバラ.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        #item-list{
+            display: flex;
+        }
+        .header-item{
+            font-size: 20px;
+            text-decoration: none;
+            list-style: none;
+            color: white;
+            text-align: center;
+            margin-left: 20px;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        header{
+            background-color: #192f60;
+            width: 0%;
+            padding: 10px;
+        }
+        #home{
+            width: 80px;
+            height: 80px;
+            opacity: 0;
+        }
+        a{
+            transition: 0.5s;
+        }
+        a:hover{
+            transition: 0.5s;
+            color: #ffc868;
+        }
+        #warning{
+            color: rgb(255, 0, 0);
+            text-align: center;
+            margin-top: 30px;
+        }
+        .container-title{
+            text-align: center;
+            font-size: 50px;
+        }
+        main{
+            max-width: 960px;
+            margin: auto;
+        }
+        .text{
+            font-size: 30px;
+            line-height: 2;
+        }
+        td{
+            font-size: 30px;
+            color: white;
+        }
+        table{
+            border: 5px solid#ffc665;
+            margin: auto;
+            box-shadow: 3px 3px rgb(133, 133, 133);
+        }
+        .hidden-item{
+            display: none;
+        }
+        .special_skill-item:hover{
+            cursor: pointer;
+        }
+        .special_skill-item{
+            font-size: 30px;
+        }
+        span{
+            color: gray;
+        }
+        ol{
+            color: white;
+        }
+        p{
+            color: white;
+        }
+        footer{
+            background-color: #0d2331;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul id="item-list">
+            <li class="header-item"><a href="#home" class="header-item"><img src="./アイコン.png" alt="ホーム" id="home"></a></li>
+            <li class="header-item"><a href="#about" class="header-item">自己紹介</a></li>
+            <li class="header-item"><a href="#special_skill" class="header-item">特技</a></li>
+            <li class="header-item"><a href="#doing" class="header-item">行っていること</a></li>
+            <li class="header-item"><a href="#message" class="header-item">メッセージ</a></li>
+            <li class="header-item"><a href="#questions" class="header-item">質問</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="container">
+            <h1 class="container-title" id="about">自己紹介</h1>
+            <table>
+                <tr>
+                    <td>生まれた年：</td><td>2009年12月</td>
+                </tr>
+                <tr>
+                    <td>性別：</td><td>男</td>
+                </tr>
+                <tr>
+                    <td>好きな果物：</td><td>梨</td>
+                </tr>
+                <tr>
+                    <td>好きな教科：</td><td>数学、英語、理科(生物以外)</td>
+                </tr>
+            </table>
+        </div>
+        <div class="container">
+            <h1 class="container-title" id="special_skill">特技</h1>
+            <ol id="special-skill-items">
+                <div class="special_skill-item">
+                    <li>円周率を100桁言える  <span>+</span></li>
+                    <p class="hidden-item">3.1415926535897932384626433832795028841971693993751<br>058209749445923078164062862089986280348253421170679</p>
+                </div>
+                <div class="special_skill-item">
+                    <li>数学検定3級所持者  <span>+</span></li>
+                    <p class="hidden-item">a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></p>
+                </div>
+                <div class="special_skill-item">
+                    <li>ゲーム作り  <span>+</span></li>
+                    <p class="hidden-item">Unity, JavaScript</p>
+                </div>
+                <div class="special_skill-item">
+                    <li>2桁×2桁の暗算ができる  <span>+</span></li>
+                    <p class="hidden-item">56 × 73 = 4088</p>
+                </div>
+            </ol>
+        </div>
+        <div class="container">
+            <h1 class="container-title" id="doing">行っていること</h1>
+            <ol id="special-skill-items">
+                <div class="special_skill-item">
+                    <li>ゲーム作り  <span>+</span></li>
+                    <p class="hidden-item">UnityやJavaScriptで、ゲームを作っています。JavaScriptは、ブラウザゲームを作れます。</p>
+                </div>
+                <div class="special_skill-item">
+                    <li>Webページ作成<span>+</span></li>
+                    <p class="hidden-item">HTMLやCSS,JavaScriptでWebページを作成しています。</p>
+                </div>
+            </ol>
+        </div>
+        <div class="container">
+            <h1 class="container-title" id="message">メッセージ</h1>
+            <p class="text">こんにちは！12歳、兄のyutoです！家でパソコンをひたすらしています！今回の夏休みこそ宿題を早めに終わらせようと思うので応援よろしくお願いします！</p>    
+        </div>
+        <div class="container">
+            <h1 class="container-title" id="questions">質問</h1>
+            <ol id="special-skill-items">
+                <div class="special_skill-item">
+                    <li>朝食は米派？パン派？  <span>+</span></li>
+                    <p class="hidden-item">パン派です。</p>
+                </div>
+                <div class="special_skill-item">
+                    <li>何人兄弟？<span>+</span></li>
+                    <p class="hidden-item">4人兄弟です。</p>
+                </div>
+                <div class="special_skill-item">
+                    <li>好きな色は？<span>+</span></li>
+                    <p class="hidden-item">青色です。</p>
+                </div>
+                <div class="special_skill-item">
+                    <li>趣味は？<span>+</span></li>
+                    <p class="hidden-item">パソコンです。</p>
+                </div>
+            </ol>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p id="warning">⚠️これはScratchから来た人専用のホームページなので限定公開です。⚠️</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>Scratch: https://scratch.mit.edu/users/yuto_haruto/</p>
+                </div>
+                <div class="col">
+                    <p>Twitter: https://twitter.com/W7nBbSDNFPSXjPd</p>
+                </div>
+                <div class="col">
+                    <p>YouTube: https://www.youtube.com/channel/UCBPF0Aia9zkbntwL01e04Pg</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>企画: yuto</p>
+                </div>
+                <div class="col">
+                    <p>構想: yuto</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        $(function(){
+            $("header").animate({"width":"100%"}, 700, function(){
+                $("#home").animate({"opacity": "1"}, 1000);
+            });
+            $(".special_skill-item").click(function(){
+                if ($(this).hasClass("open")){
+                    $(this).find("span").text("+");
+                    $(this).find(".hidden-item").slideUp();
+                    $(this).removeClass("open");
+                }else{
+                    $(this).find("span").text("-");
+                    $(this).find(".hidden-item").slideDown();
+                    $(this).addClass("open");
+                }
+            })
+        })
+    </script>
+</body>
+</html>
